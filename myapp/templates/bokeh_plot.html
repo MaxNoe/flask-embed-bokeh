@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.css" type="text/css" />
+    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-0.11.1.min.js"></script>
+    {{ script | safe }}
+  </head>
+  <body>
+    <div class=page>
+      <h1>{{ title }}</h1>
+      {{ div | safe }}
+    </div>
+    <div>
+      <form action="sine" method="get">
+        Amplitude: <input type="number" name="amplitude" value="{{ amplitude }}" step="0.1"><br>
+        Frequency: <input type="number" name="frequency" value="{{ frequency }}" step="0.1"><br>
+        <input type="submit" value="Update plot">
+      </form>
+    </div>
+  </body>
+</html>
